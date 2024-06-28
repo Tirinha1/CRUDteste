@@ -1,7 +1,8 @@
 package crud
 
 import (
-	"github.com/Tirinha1/NovoProjeto/crud/models"
+	"github.com/Tirinha1/CRUDteste/crud/models"
+
 )
 
 func SaveProduct(product models.Product) {

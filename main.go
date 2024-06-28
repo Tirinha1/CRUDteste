@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/Tirinha1/NovoProjeto/crud"
-	"github.com/Tirinha1/NovoProjeto/crud/models"
+	"github.com/Tirinha1/CRUDteste/crud"
+	"github.com/Tirinha1/CRUDteste/crud/models"
+
 )
 
 func main() {
