@@ -24,8 +24,13 @@ func main() {
 		ManufactureCountry: "Brazil",
 		Price: 299,
 	}
-
+	
 	crud.SaveProduct(secondProduct);
 
-	fmt.Println("Current products in memory:", crud.GetProducts())
+	firstProduct.Price = 350;
+
+	crud.UpdateProduct(firstProduct);
+	crud.DeleteProduct(firstProduct);
+
+	fmt.Println("Current products in memory:", crud.ReadProducts())
 }
