@@ -6,3 +6,5 @@ type Product struct {
 	ManufactureCountry string
 	Price int
 }
+
+var Products []Product
