@@ -6,8 +6,6 @@ import (
 	"github.com/Tirinha1/CRUDteste/crud/models"
 )
 
-
-
 func SaveProduct(product models.Product) error {
 	for _, p := range models.Products {
 		if p.ID == product.ID {
