@@ -6,15 +6,15 @@ import (
 	"github.com/Tirinha1/CRUDteste/crud"
 	"github.com/Tirinha1/CRUDteste/crud/models"
 )
-var firstProduct models.Product
-var secondProduct models.Product
 
 func main() {
-	crud.CreateProduct(firstProduct, 1);
-	crud.CreateProduct(secondProduct, 2);
-	
-	fmt.Println("The current procuts are: ", crud.ReadProducts())
+	var firstProduct models.Product
+	crud.CreateProduct(firstProduct)
 
-	crud.DeleteProduct(models.Products[0]);
+	var secondProduct models.Product
+	crud.CreateProduct(secondProduct)
+
+
+	fmt.Println("The current procuts are: ", crud.ReadProducts())
 
 }
