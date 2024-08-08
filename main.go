@@ -6,31 +6,15 @@ import (
 	"github.com/Tirinha1/CRUDteste/crud"
 	"github.com/Tirinha1/CRUDteste/crud/models"
 )
+var firstProduct models.Product
+var secondProduct models.Product
 
 func main() {
-
-	firstProduct := models.Product {
-		ID: 1,
-		Name: "Smartphone",
-		ManufactureCountry: "Brazil",
-		Price: 299,
-	}
-
-	crud.SaveProduct(firstProduct);
-
-	secondProduct := models.Product {
-		ID: 2,
-		Name: "Smartphone",
-		ManufactureCountry: "Brazil",
-		Price: 299,
-	}
+	crud.CreateProduct(firstProduct, 1);
+	crud.CreateProduct(secondProduct, 2);
 	
-	crud.SaveProduct(secondProduct);
+	fmt.Println("The current procuts are: ", crud.ReadProducts())
 
-	firstProduct.Price = 350;
+	crud.DeleteProduct(models.Products[0]);
 
-	crud.UpdateProduct(firstProduct);
-	crud.DeleteProduct(firstProduct);
-
-	fmt.Println("Current products in memory:", crud.ReadProducts())
 }
