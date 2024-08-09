@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	
+
 	crud.CreateProduct()
 
 	products := crud.ReadProducts()
