@@ -1,4 +1,4 @@
-package models
+package database
 
 import "math/rand/v2"
 
@@ -8,8 +8,6 @@ type Product struct {
 	ManufactureCountry string
 	Price              int
 }
-
-var Products []Product
 
 var products2 []*Product = make([]*Product, 0)
 

@@ -15,4 +15,6 @@ func main() {
 	for _, product := range products {
 		fmt.Println(*product)
 	}
+
+	
 }

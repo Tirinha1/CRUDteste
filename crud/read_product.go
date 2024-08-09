@@ -1,7 +1,7 @@
 package crud
 
-import "github.com/Tirinha1/CRUDteste/crud/models"
+import "github.com/Tirinha1/CRUDteste/crud/database"
 
-func ReadProducts() []*models.Product {
-	return models.GetAll();
+func ReadProducts() []*database.Product {
+	return database.GetAll();
 }

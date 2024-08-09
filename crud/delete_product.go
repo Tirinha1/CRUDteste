@@ -3,7 +3,7 @@ package crud
 import (
 	"fmt"
 
-	"github.com/Tirinha1/CRUDteste/crud/models"
+	"github.com/Tirinha1/CRUDteste/crud/database"
 )
 
 func DeleteProduct() {
@@ -12,5 +12,5 @@ func DeleteProduct() {
 	fmt.Println("Qual o ID do produto que deseja deletar?: ")
 	fmt.Scanf("%d", &id)
 
-	models.DelProduct(id)
+	database.DelProduct(id)
 }

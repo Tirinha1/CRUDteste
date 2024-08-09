@@ -1,3 +1,3 @@
 module github.com/Tirinha1/CRUDteste
 
-go 1.21.6
+go 1.22.3

@@ -2,12 +2,12 @@ package crud
 
 import (
 	"fmt"
-	"github.com/Tirinha1/CRUDteste/crud/models"
+	"github.com/Tirinha1/CRUDteste/crud/database"
 )
 
 func CreateProduct() {
 
-	product := models.Product{}
+	product := database.Product{}
 
 	fmt.Printf("Digite o nome do produto: ")
 	fmt.Scanf("%v\n", &product.Name)
@@ -18,5 +18,5 @@ func CreateProduct() {
 	fmt.Printf("Digite o pais que produz o produto: ")
 	fmt.Scanf("%v\n", &product.ManufactureCountry)
 
-	models.AddProduct(&product)
+	database.AddProduct(&product)
 }
