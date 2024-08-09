@@ -9,7 +9,10 @@ import (
 func main() {
 	
 	crud.CreateProduct()
-	crud.UpdateProduct()
-	
-	fmt.Println(crud.ReadProducts())
+
+	products := crud.ReadProducts()
+
+	for _, product := range products {
+		fmt.Println(*product)
+	}
 }

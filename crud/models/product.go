@@ -15,6 +15,7 @@ var products2 []*Product = make([]*Product, 0)
 
 func AddProduct(product *Product) {
 	id := rand.IntN(9999999)
+	product.ID = id
 	if GetProduct(id) == nil {
 		products2 = append(products2, product)
 	}

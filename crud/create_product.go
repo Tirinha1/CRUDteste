@@ -9,9 +9,6 @@ func CreateProduct() {
 
 	product := models.Product{}
 
-	fmt.Printf("Digite o ID: ")
-	fmt.Scanf("%v\n", &product.ID)
-
 	fmt.Printf("Digite o nome do produto: ")
 	fmt.Scanf("%v\n", &product.Name)
 
