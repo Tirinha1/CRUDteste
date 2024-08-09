@@ -1,14 +1,16 @@
 package crud
 
 import (
+	"fmt"
+
 	"github.com/Tirinha1/CRUDteste/crud/models"
 )
 
-func DeleteProduct(product models.Product) {
-	for i, p := range models.Products {
-		if p.ID == product.ID {
-			models.Products = append(models.Products[:i], models.Products[i+1:]...)
-			return
-		}
-	}
+func DeleteProduct() {
+	var id int
+
+	fmt.Println("Qual o ID do produto que deseja deletar?: ")
+	fmt.Scanf("%d", &id)
+
+	models.DelProduct(id)
 }
