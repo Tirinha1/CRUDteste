@@ -15,7 +15,10 @@ func UpdateProduct() {
 	fmt.Println("Qual o ID do produto que deseja alterar?: ")
 	fmt.Scanf("%d", &id)
 
-	product := database.GetProduct(id)
+	product, err := database.ProductDataBase.Get(id)
+	if err != nil {
+		fmt.Print("erro")
+	}
 
 	var opc int 
 	fmt.Println("O que deseja alterar do produto: 1-Preço, 2-Pais, 3-Nome")
@@ -27,17 +30,17 @@ func UpdateProduct() {
 		fmt.Println("Insira o novo preço: ")
 		fmt.Scanf("%d", &product.Price)
 
-		database.UpdtProduct(product);
+		database.ProductDataBase.Update(product);
 	case 2:
 		fmt.Println("Insira o novo pais: ")
 		fmt.Scanf("%v", &product.ManufactureCountry)
 
-		database.UpdtProduct(product);
+		database.ProductDataBase.Update(product);
 	case 3:
 		fmt.Println("Insira o novo nome: ")
 		fmt.Scanf("%v", &product.Name)
 
-		database.UpdtProduct(product);
+		database.ProductDataBase.Update(product);
 	default:
 		fmt.Println("Digite uma opção valida!")
 	}

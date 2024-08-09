@@ -12,5 +12,5 @@ func DeleteProduct() {
 	fmt.Println("Qual o ID do produto que deseja deletar?: ")
 	fmt.Scanf("%d", &id)
 
-	database.DelProduct(id)
+	database.ProductDataBase.Delete(id)
 }
