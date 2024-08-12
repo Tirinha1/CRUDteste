@@ -14,6 +14,7 @@ type Identifiable interface {
 	SetId(int)
 }
 
+
 func (d *Database[T]) Add(data T) {
 	id := rand.IntN(9999999)
 	data.SetId(id)

@@ -12,9 +12,10 @@ func main() {
 
 	products := crud.ReadProducts()
 
+	crud.UpdateProduct()
+
 	for _, product := range products {
 		fmt.Println(*product)
 	}
-
 	
 }
